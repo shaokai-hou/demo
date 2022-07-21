@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.web;
+package com.haohao.vertx.web;
 
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.json.JsonObject;

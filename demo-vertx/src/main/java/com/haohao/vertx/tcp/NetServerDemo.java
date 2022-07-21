@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.tcp;
+package com.haohao.vertx.tcp;
 
 import cn.hutool.core.util.StrUtil;
 import io.vertx.core.AbstractVerticle;
@@ -11,20 +11,16 @@ import io.vertx.core.net.SocketAddress;
  * @author haohao
  * @date 2022年07月20日 16:05
  */
-public class NetServerDemo2 extends AbstractVerticle {
+public class NetServerDemo extends AbstractVerticle {
 
     @Override
     public void start() throws Exception {
 
         final String host = "localhost";
-        final int port = 9985;
+        final int port = 9984;
 
         EventBus eventBus = this.vertx.eventBus();
-
-        eventBus.consumer("msg:test", message -> {
-            System.out.println("event bus 消息：" + message.body());
-            message.reply(message);
-        });
+        eventBus.send("msg.test", "hello word");
 
         NetServer netServer = this.vertx.createNetServer();
 

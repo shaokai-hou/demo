@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.tcp;
+package com.haohao.vertx.tcp;
 
 import io.vertx.core.Vertx;
 

@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.mqtt;
+package com.haohao.vertx.mqtt;
 
 import io.vertx.core.Vertx;
 import io.vertx.mqtt.MqttServer;

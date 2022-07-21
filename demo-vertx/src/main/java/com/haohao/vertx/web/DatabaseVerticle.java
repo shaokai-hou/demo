@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.web;
+package com.haohao.vertx.web;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.MessageConsumer;

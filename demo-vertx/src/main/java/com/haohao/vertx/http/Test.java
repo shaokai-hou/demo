@@ -1,4 +1,4 @@
-package com.haohao.demo.vertx.http;
+package com.haohao.vertx.http;
 
 import io.vertx.core.Vertx;
 
