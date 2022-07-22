@@ -21,4 +21,4 @@
 
 **1.2 动图演示**
 
-![算法归类](./images/bubbleSort.png)
+![image](./images/BubbleSort.gif)
