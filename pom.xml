@@ -9,7 +9,6 @@
     <version>1.0.0</version>
     <modules>
         <module>demo-springboot</module>
-        <module>demo-java</module>
         <module>demo-vertx</module>
         <module>demo-starter</module>
         <module>demo-sort</module>
