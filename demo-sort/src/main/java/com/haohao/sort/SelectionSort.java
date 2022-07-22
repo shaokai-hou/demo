@@ -1,5 +1,7 @@
 package com.haohao.sort;
 
+import java.util.Arrays;
+
 /**
  * 选择排序
  *
@@ -21,5 +23,6 @@ public class SelectionSort {
             array[minIndex] = array[i];
             array[i] = temp;
         }
+        System.out.println(Arrays.toString(array));
     }
 }
