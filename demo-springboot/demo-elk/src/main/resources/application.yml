@@ -1,0 +1,20 @@
+
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+  elasticsearch:
+    rest:
+      uris: 127.0.0.1:9200
+
+logging:
+  level:
+    root: info
+    com.soboot: debug
+
+logstash:
+  # logstash部署的服务器IP
+  host: 127.0.0.1
+server:
+  port: 9900

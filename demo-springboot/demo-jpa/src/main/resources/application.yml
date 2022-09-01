@@ -6,9 +6,10 @@ spring:
   application:
     name: demo-jpa
   datasource:
-    url: jdbc:h2:mem:jpa
-    driver-class-name: org.h2.Driver
-
+    url: jdbc:mysql://localhost:3306/jpa_test?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
