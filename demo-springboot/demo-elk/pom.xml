@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-elk</artifactId>
-    <version>2.0.0</version>
+    <version>1  0.0</version>
     <name>demo-elk</name>
 
     <properties>
@@ -62,7 +62,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>haohaohsk/demo-elk</repository>
+<!--                    <repository>haohaohsk/demo-elk</repository>-->
+                    <repository>101.34.9.215:8081/test/demo-elk</repository>
                     <tag>${project.version}</tag>
                     <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                     <buildArgs>
