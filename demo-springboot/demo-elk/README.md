@@ -10,3 +10,13 @@ docker-compose up -d
 ```shell
 docker build -t demo-elk-app:1.0.0 .
 ```
+
+>打包命令
+```shell
+mvn clean package
+mvn dockerfile:build
+```
+>推送镜像
+```shell
+mvn dockerfile:push
+```
