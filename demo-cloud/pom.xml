@@ -28,7 +28,7 @@
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <docker.repository.host>101.34.9.215:8081</docker.repository.host>
         <docker.namespace>test</docker.namespace>
-        <demo.cloud.project.version>8.0.0</demo.cloud.project.version>
+        <demo.cloud.project.version>10.0.0</demo.cloud.project.version>
     </properties>
 
     <dependencyManagement>
@@ -83,19 +83,11 @@
                             <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                         </buildArgs>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <id>default</id>
-                            <goals>
-                                <goal>build</goal>
-                                <goal>push</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
 
+        <!--插件依赖-->
         <plugins>
             <plugin>
                 <groupId>com.spotify</groupId>
@@ -110,4 +102,33 @@
             </plugin>
         </plugins>
     </build>
+
+    <!--打包发布依赖-->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://101.34.9.215:8085/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshot</name>
+            <url>http://101.34.9.215:8085/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!--从私服下载依赖-->
+    <repositories>
+        <repository>
+            <id>maven-nexus</id>
+            <name>maven-nexus</name>
+            <url>http://101.34.9.215:8085/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
